@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  ApiGateWay:
+    build: ./ApiGateWay
+    image: apigateway:betav1
+    ports:
+      - 8080:8080
+  Service1:
+    build: ./ApiGateWay
+    image: service1:betav1
+    ports:
+      - 8081:8080
