@@ -32,3 +32,8 @@ services:
      - '8090:80'
     environment:
       PMA_HOST: db
+  Dummy2:
+    build: ./api-dummy
+    image: dummy2:betav1
+    ports:
+      - 8082:8082

@@ -1,10 +1,6 @@
-version: '2'
-
 services:
-
   ApiGateWay:
     depends_on:
-        - db
-        - Dummy
-    
-      
+    - Dummy
+    - Dummy2
+version: '2'
