@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  ApiGateWay:
+    depends_on:
+        - db
+        - Dummy
+    
+      
