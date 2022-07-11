@@ -15,13 +15,13 @@ microservices_to_activate = []
 for val in configuration.split(";"):    
     #para que la string no sea empty ni null
     if val:
-        if val.split("=")[1] == "true":
+        if val.split("=")[1] == "true" or val.split("=")[1] == "1":
             microservices_to_activate.append(val.split("=")[0].strip())
 
 
 
 #tratamos el json para añadir nuevos microservicios
-values = [v for value in yaml_data["services"]["ApiGateWay"].values() for v in value] 
+values = [v for value in yaml_data["services"]["ApiGateWay"].values() if value for v in value] 
 values=microservices_to_activate
 yaml_data["services"]["ApiGateWay"]["depends_on"]=values
 
