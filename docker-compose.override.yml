@@ -2,5 +2,5 @@ services:
   ApiGateWay:
     depends_on:
     - Dummy
-    - app
+    - Dummy2
 version: '2'
