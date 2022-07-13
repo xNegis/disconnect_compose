@@ -1,7 +1,5 @@
 services:
   ApiGateWay:
     depends_on:
-    - Dummy
     - db
-    - app
 version: '2'
