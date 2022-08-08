@@ -1,5 +1,6 @@
 services:
-  ApiGateWay:
+  apigateway:
     depends_on:
-    - db
+    - authservice
+    - client
 version: '2'

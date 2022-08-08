@@ -2,33 +2,21 @@ version: '2'
 
 services:
 
-  ApiGateWay:
+  apigateway:
     build: ./ApiGateWay
-    image: apigateway:betav1
+    image: apigateway
     ports:
       - 8080:8080
-      
-  Dummy:
-    build: ./api-dummy
-    image: dummy:betav1
-    ports:
-      - 8081:8081
-  db:
-    image: mysql:latest
-    container_name: BD
-    restart: always
-    ports:
-     - '6603:3306'
-    environment:
-      MYSQL_ROOT_PASSWORD: prueba
 
-  app:
-    depends_on:
-     - db
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    restart: always
+  authservice:
+    build: ./AuthService
+    image: authservice
     ports:
-     - '8090:80'
-    environment:
-      PMA_HOST: db
+      - 8090:8090
+
+  client:
+    build: ./Client/client
+    image: client
+    ports:
+      - 3000:3000
+      
