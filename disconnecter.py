@@ -20,9 +20,9 @@ for val in configuration.split(";"):
 
 
 #tratamos el json para añadir nuevos microservicios
-values = [v for value in yaml_data["services"]["ApiGateWay"].values() if value for v in value] 
+values = [v for value in yaml_data["services"]["apigateway"].values() if value for v in value] 
 values=microservices_to_activate
-yaml_data["services"]["ApiGateWay"]["depends_on"]=values
+yaml_data["services"]["apigateway"]["depends_on"]=values
 
 
 #escribimos en el yaml los datos

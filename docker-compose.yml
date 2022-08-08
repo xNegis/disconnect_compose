@@ -19,4 +19,10 @@ services:
     image: client
     ports:
       - 3000:3000
-      
+
+  rabbit:
+    image: rabbitmq:3.10-management
+    container_name: rabbitmq
+    ports:
+     - 5672:5672
+     - 15672:15672
