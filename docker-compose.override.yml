@@ -3,4 +3,5 @@ services:
     depends_on:
     - authservice
     - client
+    - rabbit
 version: '2'
