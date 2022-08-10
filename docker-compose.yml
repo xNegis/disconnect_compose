@@ -8,6 +8,13 @@ services:
     ports:
       - 8080:8080
 
+  catalog:
+    build: ./Catalog
+    image: catalog
+    ports:
+      - 8095:8095
+
+  
   authservice:
     build: ./AuthService
     image: authservice
