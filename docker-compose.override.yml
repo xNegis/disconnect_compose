@@ -4,4 +4,7 @@ services:
     - authservice
     - client
     - catalog
+    - shop
+    - rabbit
+    - mailing
 version: '2'

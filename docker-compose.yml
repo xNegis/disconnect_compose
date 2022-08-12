@@ -13,6 +13,12 @@ services:
     image: catalog
     ports:
       - 8095:8095
+      
+  shop:
+    build: ./shop
+    image: shop
+    ports:
+      - 8096:8096      
 
   
   authservice:
@@ -26,6 +32,12 @@ services:
     image: client
     ports:
       - 3000:3000
+      
+  mailing:
+    build: ./mailing
+    image: mailing
+    ports:
+      - 8097:8097
 
   rabbit:
     image: rabbitmq:3.10-management
