@@ -6,4 +6,5 @@ services:
     - catalog
     - shop
     - rabbit
+    - mailing
 version: '2'

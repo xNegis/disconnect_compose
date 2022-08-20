@@ -7,7 +7,7 @@ with open('docker-compose.override.yml', 'r') as file:
     yaml_data = yaml.safe_load(file)
 
 
-configuration = open("disconnecter.config", "r").read()
+configuration = open("disconnecter.config", "r").read().replace("\n", "")
 
 microservices_to_activate = []
 
