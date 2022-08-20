@@ -33,6 +33,12 @@ services:
     ports:
       - 3000:3000
       
+  mailing:
+    build: ./mailing
+    image: mailing
+    ports:
+      - 8097:8097
+      
 
   rabbit:
     image: rabbitmq:3.10-management
