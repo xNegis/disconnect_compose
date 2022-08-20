@@ -5,6 +5,6 @@ services:
     - client
     - catalog
     - shop
-    - rabbit
     - mailing
+    - rabbit
 version: '2'
